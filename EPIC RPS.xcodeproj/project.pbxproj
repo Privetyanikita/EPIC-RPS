@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84FBEC002C15DC90005AF1A0 /* EPIC_RPSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEBFF2C15DC90005AF1A0 /* EPIC_RPSApp.swift */; };
+		84FBEC022C15DC90005AF1A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC012C15DC90005AF1A0 /* ContentView.swift */; };
+		84FBEC042C15DC92005AF1A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FBEC032C15DC92005AF1A0 /* Assets.xcassets */; };
+		84FBEC072C15DC92005AF1A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FBEC062C15DC92005AF1A0 /* Preview Assets.xcassets */; };
+		84FBEC112C160333005AF1A0 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC102C160333005AF1A0 /* DataModel.swift */; };
+		84FBEC132C1603C4005AF1A0 /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC122C1603C4005AF1A0 /* RulesView.swift */; };
+		84FBEC152C160413005AF1A0 /* FightLoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC142C160413005AF1A0 /* FightLoadView.swift */; };
+		84FBEC172C16042D005AF1A0 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC162C16042D005AF1A0 /* GameView.swift */; };
+		84FBEC1A2C16045A005AF1A0 /* FightResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC192C16045A005AF1A0 /* FightResultView.swift */; };
+		84FBEC1C2C160585005AF1A0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC1B2C160585005AF1A0 /* HomeView.swift */; };
+		84FBEC1F2C1605D0005AF1A0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC1E2C1605D0005AF1A0 /* HomeViewModel.swift */; };
+		84FBEC212C1605E0005AF1A0 /* RulesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC202C1605E0005AF1A0 /* RulesViewModel.swift */; };
+		84FBEC232C1605F2005AF1A0 /* FightLoadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC222C1605F2005AF1A0 /* FightLoadViewModel.swift */; };
+		84FBEC252C160619005AF1A0 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC242C160619005AF1A0 /* GameViewModel.swift */; };
+		84FBEC272C16062A005AF1A0 /* FightResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC262C16062A005AF1A0 /* FightResultViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		84FBEBFC2C15DC90005AF1A0 /* EPIC RPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EPIC RPS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84FBEBFF2C15DC90005AF1A0 /* EPIC_RPSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPIC_RPSApp.swift; sourceTree = "<group>"; };
+		84FBEC012C15DC90005AF1A0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		84FBEC032C15DC92005AF1A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84FBEC062C15DC92005AF1A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		84FBEC102C160333005AF1A0 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		84FBEC122C1603C4005AF1A0 /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
+		84FBEC142C160413005AF1A0 /* FightLoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightLoadView.swift; sourceTree = "<group>"; };
+		84FBEC162C16042D005AF1A0 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		84FBEC192C16045A005AF1A0 /* FightResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightResultView.swift; sourceTree = "<group>"; };
+		84FBEC1B2C160585005AF1A0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		84FBEC1E2C1605D0005AF1A0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		84FBEC202C1605E0005AF1A0 /* RulesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewModel.swift; sourceTree = "<group>"; };
+		84FBEC222C1605F2005AF1A0 /* FightLoadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightLoadViewModel.swift; sourceTree = "<group>"; };
+		84FBEC242C160619005AF1A0 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		84FBEC262C16062A005AF1A0 /* FightResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightResultViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84FBEBF92C15DC90005AF1A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84FBEBF32C15DC90005AF1A0 = {
+			isa = PBXGroup;
+			children = (
+				84FBEBFE2C15DC90005AF1A0 /* EPIC RPS */,
+				84FBEBFD2C15DC90005AF1A0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84FBEBFD2C15DC90005AF1A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84FBEBFC2C15DC90005AF1A0 /* EPIC RPS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84FBEBFE2C15DC90005AF1A0 /* EPIC RPS */ = {
+			isa = PBXGroup;
+			children = (
+				84FBEC0D2C15E429005AF1A0 /* Models */,
+				84FBEC0E2C15E43E005AF1A0 /* Views */,
+				84FBEC0F2C15E452005AF1A0 /* ViewModels */,
+				84FBEBFF2C15DC90005AF1A0 /* EPIC_RPSApp.swift */,
+				84FBEC032C15DC92005AF1A0 /* Assets.xcassets */,
+				84FBEC052C15DC92005AF1A0 /* Preview Content */,
+			);
+			path = "EPIC RPS";
+			sourceTree = "<group>";
+		};
+		84FBEC052C15DC92005AF1A0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				84FBEC062C15DC92005AF1A0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		84FBEC0D2C15E429005AF1A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84FBEC102C160333005AF1A0 /* DataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		84FBEC0E2C15E43E005AF1A0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84FBEC012C15DC90005AF1A0 /* ContentView.swift */,
+				84FBEC1B2C160585005AF1A0 /* HomeView.swift */,
+				84FBEC122C1603C4005AF1A0 /* RulesView.swift */,
+				84FBEC142C160413005AF1A0 /* FightLoadView.swift */,
+				84FBEC162C16042D005AF1A0 /* GameView.swift */,
+				84FBEC192C16045A005AF1A0 /* FightResultView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84FBEC0F2C15E452005AF1A0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				84FBEC1E2C1605D0005AF1A0 /* HomeViewModel.swift */,
+				84FBEC202C1605E0005AF1A0 /* RulesViewModel.swift */,
+				84FBEC222C1605F2005AF1A0 /* FightLoadViewModel.swift */,
+				84FBEC242C160619005AF1A0 /* GameViewModel.swift */,
+				84FBEC262C16062A005AF1A0 /* FightResultViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84FBEBFB2C15DC90005AF1A0 /* EPIC RPS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84FBEC0A2C15DC92005AF1A0 /* Build configuration list for PBXNativeTarget "EPIC RPS" */;
+			buildPhases = (
+				84FBEBF82C15DC90005AF1A0 /* Sources */,
+				84FBEBF92C15DC90005AF1A0 /* Frameworks */,
+				84FBEBFA2C15DC90005AF1A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EPIC RPS";
+			productName = "EPIC RPS";
+			productReference = 84FBEBFC2C15DC90005AF1A0 /* EPIC RPS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84FBEBF42C15DC90005AF1A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					84FBEBFB2C15DC90005AF1A0 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 84FBEBF72C15DC90005AF1A0 /* Build configuration list for PBXProject "EPIC RPS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84FBEBF32C15DC90005AF1A0;
+			productRefGroup = 84FBEBFD2C15DC90005AF1A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84FBEBFB2C15DC90005AF1A0 /* EPIC RPS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84FBEBFA2C15DC90005AF1A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84FBEC072C15DC92005AF1A0 /* Preview Assets.xcassets in Resources */,
+				84FBEC042C15DC92005AF1A0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84FBEBF82C15DC90005AF1A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84FBEC252C160619005AF1A0 /* GameViewModel.swift in Sources */,
+				84FBEC272C16062A005AF1A0 /* FightResultViewModel.swift in Sources */,
+				84FBEC132C1603C4005AF1A0 /* RulesView.swift in Sources */,
+				84FBEC1F2C1605D0005AF1A0 /* HomeViewModel.swift in Sources */,
+				84FBEC022C15DC90005AF1A0 /* ContentView.swift in Sources */,
+				84FBEC232C1605F2005AF1A0 /* FightLoadViewModel.swift in Sources */,
+				84FBEC002C15DC90005AF1A0 /* EPIC_RPSApp.swift in Sources */,
+				84FBEC1A2C16045A005AF1A0 /* FightResultView.swift in Sources */,
+				84FBEC112C160333005AF1A0 /* DataModel.swift in Sources */,
+				84FBEC212C1605E0005AF1A0 /* RulesViewModel.swift in Sources */,
+				84FBEC1C2C160585005AF1A0 /* HomeView.swift in Sources */,
+				84FBEC172C16042D005AF1A0 /* GameView.swift in Sources */,
+				84FBEC152C160413005AF1A0 /* FightLoadView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		84FBEC082C15DC92005AF1A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84FBEC092C15DC92005AF1A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84FBEC0B2C15DC92005AF1A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EPIC RPS/Preview Content\"";
+				DEVELOPMENT_TEAM = R5SS3C487L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.privetyanikiya.EPIC-RPS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84FBEC0C2C15DC92005AF1A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EPIC RPS/Preview Content\"";
+				DEVELOPMENT_TEAM = R5SS3C487L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.privetyanikiya.EPIC-RPS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84FBEBF72C15DC90005AF1A0 /* Build configuration list for PBXProject "EPIC RPS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84FBEC082C15DC92005AF1A0 /* Debug */,
+				84FBEC092C15DC92005AF1A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84FBEC0A2C15DC92005AF1A0 /* Build configuration list for PBXNativeTarget "EPIC RPS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84FBEC0B2C15DC92005AF1A0 /* Debug */,
+				84FBEC0C2C15DC92005AF1A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84FBEBF42C15DC90005AF1A0 /* Project object */;
+}
