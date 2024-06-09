@@ -7,40 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84218BAA2C1644B80006D238 /* FightResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BA92C1644B80006D238 /* FightResultView.swift */; };
+		84218BAC2C1644D30006D238 /* FightResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BAB2C1644D30006D238 /* FightResultModel.swift */; };
+		84218BAE2C1644FA0006D238 /* FightResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BAD2C1644FA0006D238 /* FightResultViewModel.swift */; };
+		84218BB02C16450B0006D238 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BAF2C16450B0006D238 /* GameModel.swift */; };
+		84218BB22C1645230006D238 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BB12C1645230006D238 /* GameView.swift */; };
+		84218BB42C1645360006D238 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BB32C1645360006D238 /* GameViewModel.swift */; };
+		84218BB62C1645560006D238 /* FightLoadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BB52C1645560006D238 /* FightLoadViewModel.swift */; };
+		84218BB82C1645680006D238 /* FightLoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BB72C1645680006D238 /* FightLoadView.swift */; };
+		84218BBA2C1645810006D238 /* FightLoadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BB92C1645810006D238 /* FightLoadModel.swift */; };
+		84218BBC2C1645970006D238 /* RulesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BBB2C1645970006D238 /* RulesViewModel.swift */; };
+		84218BBE2C1645A90006D238 /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BBD2C1645A90006D238 /* RulesView.swift */; };
+		84218BC02C1645B90006D238 /* RulesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BBF2C1645B90006D238 /* RulesModel.swift */; };
+		84218BC22C1645CB0006D238 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BC12C1645CB0006D238 /* HomeViewModel.swift */; };
+		84218BC42C1645DC0006D238 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BC32C1645DC0006D238 /* HomeView.swift */; };
+		84218BC62C1645ED0006D238 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BC52C1645ED0006D238 /* HomeModel.swift */; };
 		84FBEC002C15DC90005AF1A0 /* EPIC_RPSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEBFF2C15DC90005AF1A0 /* EPIC_RPSApp.swift */; };
 		84FBEC022C15DC90005AF1A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC012C15DC90005AF1A0 /* ContentView.swift */; };
 		84FBEC042C15DC92005AF1A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FBEC032C15DC92005AF1A0 /* Assets.xcassets */; };
 		84FBEC072C15DC92005AF1A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FBEC062C15DC92005AF1A0 /* Preview Assets.xcassets */; };
-		84FBEC112C160333005AF1A0 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC102C160333005AF1A0 /* DataModel.swift */; };
-		84FBEC132C1603C4005AF1A0 /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC122C1603C4005AF1A0 /* RulesView.swift */; };
-		84FBEC152C160413005AF1A0 /* FightLoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC142C160413005AF1A0 /* FightLoadView.swift */; };
-		84FBEC172C16042D005AF1A0 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC162C16042D005AF1A0 /* GameView.swift */; };
-		84FBEC1A2C16045A005AF1A0 /* FightResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC192C16045A005AF1A0 /* FightResultView.swift */; };
-		84FBEC1C2C160585005AF1A0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC1B2C160585005AF1A0 /* HomeView.swift */; };
-		84FBEC1F2C1605D0005AF1A0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC1E2C1605D0005AF1A0 /* HomeViewModel.swift */; };
-		84FBEC212C1605E0005AF1A0 /* RulesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC202C1605E0005AF1A0 /* RulesViewModel.swift */; };
-		84FBEC232C1605F2005AF1A0 /* FightLoadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC222C1605F2005AF1A0 /* FightLoadViewModel.swift */; };
-		84FBEC252C160619005AF1A0 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC242C160619005AF1A0 /* GameViewModel.swift */; };
-		84FBEC272C16062A005AF1A0 /* FightResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBEC262C16062A005AF1A0 /* FightResultViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84218BA92C1644B80006D238 /* FightResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightResultView.swift; sourceTree = "<group>"; };
+		84218BAB2C1644D30006D238 /* FightResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightResultModel.swift; sourceTree = "<group>"; };
+		84218BAD2C1644FA0006D238 /* FightResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightResultViewModel.swift; sourceTree = "<group>"; };
+		84218BAF2C16450B0006D238 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		84218BB12C1645230006D238 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		84218BB32C1645360006D238 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		84218BB52C1645560006D238 /* FightLoadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightLoadViewModel.swift; sourceTree = "<group>"; };
+		84218BB72C1645680006D238 /* FightLoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightLoadView.swift; sourceTree = "<group>"; };
+		84218BB92C1645810006D238 /* FightLoadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightLoadModel.swift; sourceTree = "<group>"; };
+		84218BBB2C1645970006D238 /* RulesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewModel.swift; sourceTree = "<group>"; };
+		84218BBD2C1645A90006D238 /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
+		84218BBF2C1645B90006D238 /* RulesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesModel.swift; sourceTree = "<group>"; };
+		84218BC12C1645CB0006D238 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		84218BC32C1645DC0006D238 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		84218BC52C1645ED0006D238 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		84FBEBFC2C15DC90005AF1A0 /* EPIC RPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EPIC RPS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FBEBFF2C15DC90005AF1A0 /* EPIC_RPSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPIC_RPSApp.swift; sourceTree = "<group>"; };
 		84FBEC012C15DC90005AF1A0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		84FBEC032C15DC92005AF1A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84FBEC062C15DC92005AF1A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		84FBEC102C160333005AF1A0 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		84FBEC122C1603C4005AF1A0 /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
-		84FBEC142C160413005AF1A0 /* FightLoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightLoadView.swift; sourceTree = "<group>"; };
-		84FBEC162C16042D005AF1A0 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
-		84FBEC192C16045A005AF1A0 /* FightResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightResultView.swift; sourceTree = "<group>"; };
-		84FBEC1B2C160585005AF1A0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		84FBEC1E2C1605D0005AF1A0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		84FBEC202C1605E0005AF1A0 /* RulesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewModel.swift; sourceTree = "<group>"; };
-		84FBEC222C1605F2005AF1A0 /* FightLoadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightLoadViewModel.swift; sourceTree = "<group>"; };
-		84FBEC242C160619005AF1A0 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
-		84FBEC262C16062A005AF1A0 /* FightResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightResultViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,198 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84218B942C16431F0006D238 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				84218B952C1643310006D238 /* Home */,
+				84218B962C16433B0006D238 /* Rules */,
+				84218B982C1643770006D238 /* Fight Load */,
+				84218B972C16435D0006D238 /* Game */,
+				84218B992C1643AB0006D238 /* FightResult */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		84218B952C1643310006D238 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				84218B9A2C1643DC0006D238 /* Model */,
+				84218B9B2C1643E20006D238 /* View */,
+				84218B9C2C1643EE0006D238 /* ViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		84218B962C16433B0006D238 /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				84218B9F2C1644180006D238 /* Model */,
+				84218B9E2C1644130006D238 /* View */,
+				84218B9D2C16440C0006D238 /* ViewModel */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
+		84218B972C16435D0006D238 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				84218BA52C1644720006D238 /* Model */,
+				84218BA42C16446C0006D238 /* View */,
+				84218BA32C1644630006D238 /* ViewModel */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		84218B982C1643770006D238 /* Fight Load */ = {
+			isa = PBXGroup;
+			children = (
+				84218BA22C16442D0006D238 /* Model */,
+				84218BA12C1644260006D238 /* View */,
+				84218BA02C16441F0006D238 /* ViewModel */,
+			);
+			path = "Fight Load";
+			sourceTree = "<group>";
+		};
+		84218B992C1643AB0006D238 /* FightResult */ = {
+			isa = PBXGroup;
+			children = (
+				84218BA82C1644860006D238 /* Model */,
+				84218BA72C16447F0006D238 /* View */,
+				84218BA62C1644780006D238 /* ViewModel */,
+			);
+			path = FightResult;
+			sourceTree = "<group>";
+		};
+		84218B9A2C1643DC0006D238 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84218BC52C1645ED0006D238 /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84218B9B2C1643E20006D238 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84218BC32C1645DC0006D238 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84218B9C2C1643EE0006D238 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84218BC12C1645CB0006D238 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84218B9D2C16440C0006D238 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84218BBB2C1645970006D238 /* RulesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84218B9E2C1644130006D238 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84218BBD2C1645A90006D238 /* RulesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84218B9F2C1644180006D238 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84218BBF2C1645B90006D238 /* RulesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84218BA02C16441F0006D238 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84218BB52C1645560006D238 /* FightLoadViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84218BA12C1644260006D238 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84218BB72C1645680006D238 /* FightLoadView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84218BA22C16442D0006D238 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84218BB92C1645810006D238 /* FightLoadModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84218BA32C1644630006D238 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84218BB32C1645360006D238 /* GameViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84218BA42C16446C0006D238 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84218BB12C1645230006D238 /* GameView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84218BA52C1644720006D238 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84218BAF2C16450B0006D238 /* GameModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84218BA62C1644780006D238 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84218BAD2C1644FA0006D238 /* FightResultViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84218BA72C16447F0006D238 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84218BA92C1644B80006D238 /* FightResultView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84218BA82C1644860006D238 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84218BAB2C1644D30006D238 /* FightResultModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84218BC72C1646970006D238 /* SupportingFails */ = {
+			isa = PBXGroup;
+			children = (
+				84FBEBFF2C15DC90005AF1A0 /* EPIC_RPSApp.swift */,
+				84FBEC032C15DC92005AF1A0 /* Assets.xcassets */,
+				84FBEC052C15DC92005AF1A0 /* Preview Content */,
+			);
+			path = SupportingFails;
+			sourceTree = "<group>";
+		};
 		84FBEBF32C15DC90005AF1A0 = {
 			isa = PBXGroup;
 			children = (
@@ -73,12 +273,9 @@
 		84FBEBFE2C15DC90005AF1A0 /* EPIC RPS */ = {
 			isa = PBXGroup;
 			children = (
-				84FBEC0D2C15E429005AF1A0 /* Models */,
-				84FBEC0E2C15E43E005AF1A0 /* Views */,
-				84FBEC0F2C15E452005AF1A0 /* ViewModels */,
-				84FBEBFF2C15DC90005AF1A0 /* EPIC_RPSApp.swift */,
-				84FBEC032C15DC92005AF1A0 /* Assets.xcassets */,
-				84FBEC052C15DC92005AF1A0 /* Preview Content */,
+				84218B942C16431F0006D238 /* Modules */,
+				84FBEC012C15DC90005AF1A0 /* ContentView.swift */,
+				84218BC72C1646970006D238 /* SupportingFails */,
 			);
 			path = "EPIC RPS";
 			sourceTree = "<group>";
@@ -89,39 +286,6 @@
 				84FBEC062C15DC92005AF1A0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		84FBEC0D2C15E429005AF1A0 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				84FBEC102C160333005AF1A0 /* DataModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		84FBEC0E2C15E43E005AF1A0 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				84FBEC012C15DC90005AF1A0 /* ContentView.swift */,
-				84FBEC1B2C160585005AF1A0 /* HomeView.swift */,
-				84FBEC122C1603C4005AF1A0 /* RulesView.swift */,
-				84FBEC142C160413005AF1A0 /* FightLoadView.swift */,
-				84FBEC162C16042D005AF1A0 /* GameView.swift */,
-				84FBEC192C16045A005AF1A0 /* FightResultView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		84FBEC0F2C15E452005AF1A0 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				84FBEC1E2C1605D0005AF1A0 /* HomeViewModel.swift */,
-				84FBEC202C1605E0005AF1A0 /* RulesViewModel.swift */,
-				84FBEC222C1605F2005AF1A0 /* FightLoadViewModel.swift */,
-				84FBEC242C160619005AF1A0 /* GameViewModel.swift */,
-				84FBEC262C16062A005AF1A0 /* FightResultViewModel.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,19 +358,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84FBEC252C160619005AF1A0 /* GameViewModel.swift in Sources */,
-				84FBEC272C16062A005AF1A0 /* FightResultViewModel.swift in Sources */,
-				84FBEC132C1603C4005AF1A0 /* RulesView.swift in Sources */,
-				84FBEC1F2C1605D0005AF1A0 /* HomeViewModel.swift in Sources */,
+				84218BC42C1645DC0006D238 /* HomeView.swift in Sources */,
+				84218BB62C1645560006D238 /* FightLoadViewModel.swift in Sources */,
+				84218BAE2C1644FA0006D238 /* FightResultViewModel.swift in Sources */,
+				84218BBA2C1645810006D238 /* FightLoadModel.swift in Sources */,
+				84218BBC2C1645970006D238 /* RulesViewModel.swift in Sources */,
+				84218BB22C1645230006D238 /* GameView.swift in Sources */,
+				84218BBE2C1645A90006D238 /* RulesView.swift in Sources */,
 				84FBEC022C15DC90005AF1A0 /* ContentView.swift in Sources */,
-				84FBEC232C1605F2005AF1A0 /* FightLoadViewModel.swift in Sources */,
+				84218BAA2C1644B80006D238 /* FightResultView.swift in Sources */,
+				84218BB82C1645680006D238 /* FightLoadView.swift in Sources */,
+				84218BAC2C1644D30006D238 /* FightResultModel.swift in Sources */,
 				84FBEC002C15DC90005AF1A0 /* EPIC_RPSApp.swift in Sources */,
-				84FBEC1A2C16045A005AF1A0 /* FightResultView.swift in Sources */,
-				84FBEC112C160333005AF1A0 /* DataModel.swift in Sources */,
-				84FBEC212C1605E0005AF1A0 /* RulesViewModel.swift in Sources */,
-				84FBEC1C2C160585005AF1A0 /* HomeView.swift in Sources */,
-				84FBEC172C16042D005AF1A0 /* GameView.swift in Sources */,
-				84FBEC152C160413005AF1A0 /* FightLoadView.swift in Sources */,
+				84218BC02C1645B90006D238 /* RulesModel.swift in Sources */,
+				84218BC22C1645CB0006D238 /* HomeViewModel.swift in Sources */,
+				84218BB42C1645360006D238 /* GameViewModel.swift in Sources */,
+				84218BC62C1645ED0006D238 /* HomeModel.swift in Sources */,
+				84218BB02C16450B0006D238 /* GameModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
