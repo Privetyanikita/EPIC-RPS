@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		227EDC5D2C18895700EC9A77 /* PlayerAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227EDC5C2C18895700EC9A77 /* PlayerAvatarView.swift */; };
+		227EDC5F2C188BFC00EC9A77 /* PlayerStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227EDC5E2C188BFC00EC9A77 /* PlayerStatisticView.swift */; };
+		227EDC612C18AC2700EC9A77 /* VSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227EDC602C18AC2700EC9A77 /* VSView.swift */; };
+		227EDC632C18ACE800EC9A77 /* GetReadyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227EDC622C18ACE800EC9A77 /* GetReadyView.swift */; };
+		227EDC652C18AD4E00EC9A77 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227EDC642C18AD4E00EC9A77 /* BackgroundView.swift */; };
 		5263BE002C164BF9008978A7 /* ImageFightResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BDFF2C164BF9008978A7 /* ImageFightResultView.swift */; };
 		5263BE022C164CB7008978A7 /* ButtonFightResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BE012C164CB7008978A7 /* ButtonFightResultView.swift */; };
 		5263BE042C1650DE008978A7 /* CheckFightResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BE032C1650DE008978A7 /* CheckFightResultView.swift */; };
@@ -38,6 +43,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		227EDC5C2C18895700EC9A77 /* PlayerAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerAvatarView.swift; sourceTree = "<group>"; };
+		227EDC5E2C188BFC00EC9A77 /* PlayerStatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatisticView.swift; sourceTree = "<group>"; };
+		227EDC602C18AC2700EC9A77 /* VSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSView.swift; sourceTree = "<group>"; };
+		227EDC622C18ACE800EC9A77 /* GetReadyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReadyView.swift; sourceTree = "<group>"; };
+		227EDC642C18AD4E00EC9A77 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		5263BDFF2C164BF9008978A7 /* ImageFightResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFightResultView.swift; sourceTree = "<group>"; };
 		5263BE012C164CB7008978A7 /* ButtonFightResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFightResultView.swift; sourceTree = "<group>"; };
 		5263BE032C1650DE008978A7 /* CheckFightResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckFightResultView.swift; sourceTree = "<group>"; };
@@ -214,6 +224,11 @@
 			isa = PBXGroup;
 			children = (
 				84218BB72C1645680006D238 /* FightLoadView.swift */,
+				227EDC5E2C188BFC00EC9A77 /* PlayerStatisticView.swift */,
+				227EDC5C2C18895700EC9A77 /* PlayerAvatarView.swift */,
+				227EDC602C18AC2700EC9A77 /* VSView.swift */,
+				227EDC622C18ACE800EC9A77 /* GetReadyView.swift */,
+				227EDC642C18AD4E00EC9A77 /* BackgroundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -383,25 +398,30 @@
 				5263BE0B2C16552B008978A7 /* CheckFightResultLoosView.swift in Sources */,
 				84218BBC2C1645970006D238 /* RulesViewModel.swift in Sources */,
 				5263BE022C164CB7008978A7 /* ButtonFightResultView.swift in Sources */,
+				227EDC652C18AD4E00EC9A77 /* BackgroundView.swift in Sources */,
 				848768BE2C18AABD000E593B /* ButtonsView.swift in Sources */,
 				848768BC2C18AABD000E593B /* ButtonView.swift in Sources */,
 				84218BB22C1645230006D238 /* GameView.swift in Sources */,
 				84218BBE2C1645A90006D238 /* RulesView.swift in Sources */,
+				227EDC632C18ACE800EC9A77 /* GetReadyView.swift in Sources */,
 				84FBEC022C15DC90005AF1A0 /* ContentView.swift in Sources */,
 				84218BAA2C1644B80006D238 /* FightResultWinView.swift in Sources */,
 				848768BD2C18AABD000E593B /* TimerView.swift in Sources */,
 				5263BE002C164BF9008978A7 /* ImageFightResultView.swift in Sources */,
+				227EDC612C18AC2700EC9A77 /* VSView.swift in Sources */,
 				84218BB82C1645680006D238 /* FightLoadView.swift in Sources */,
 				84FBEC002C15DC90005AF1A0 /* EPIC_RPSApp.swift in Sources */,
 				84218BC02C1645B90006D238 /* RulesModel.swift in Sources */,
 				848768C02C18AABD000E593B /* PointsView.swift in Sources */,
 				84218BC22C1645CB0006D238 /* HomeViewModel.swift in Sources */,
+				227EDC5F2C188BFC00EC9A77 /* PlayerStatisticView.swift in Sources */,
 				84218BB42C1645360006D238 /* GameViewModel.swift in Sources */,
 				5263BE042C1650DE008978A7 /* CheckFightResultView.swift in Sources */,
 				5263BE072C165425008978A7 /* FightResuleLoosView.swift in Sources */,
 				848768BF2C18AABD000E593B /* BackgoundView.swift in Sources */,
 				5263BE092C165486008978A7 /* ImageFightResultLoosView.swift in Sources */,
 				84218BC62C1645ED0006D238 /* HomeModel.swift in Sources */,
+				227EDC5D2C18895700EC9A77 /* PlayerAvatarView.swift in Sources */,
 				84218BB02C16450B0006D238 /* GameModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

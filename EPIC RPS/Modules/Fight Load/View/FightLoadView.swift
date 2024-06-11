@@ -8,79 +8,36 @@
 import SwiftUI
 
 struct FightLoadView: View {
+    // количество побед и поражений игроков, которое обновляется перед началом игры
+    private var playerOneVictoriesAmount = 10
+    private var playerOneLoseAmount = 2
+    private var playerTwoVictoriesAmount = 23
+    private var playerTwoLoseAmount = 1
+
     var body: some View {
         ZStack {
-            Image("BackgroundBlueBlurred")
-                .resizable()
-                .ignoresSafeArea()
+            BackgroundView()
             VStack {
                 Spacer()
-                
-                Image("AlienEmoji")
-                    .resizable()
-                    .frame(width: 87, height: 100.47)
-                
-                HStack {
-                    Text("10")
-                        .bold()
-                        .font(.system(size: 21))
-                        .foregroundStyle(.yellow)
-                    Text("Victories/")
-                        .bold()
-                        .font(.system(size: 21))
-                        .foregroundStyle(.white)
-                }
-                HStack {
-                    Text("2")
-                        .bold()
-                        .font(.system(size: 21))
-                        .foregroundStyle(.red)
-                    Text("Lose")
-                        .bold()
-                        .font(.system(size: 21))
-                        .foregroundStyle(.white)
-                }
-                
+                PlayerStatisticView(
+                    imageName: "AlienEmoji",
+                    imageWidth: 87,
+                    imageHeight: 100.47,
+                    victoriesAmount: playerOneVictoriesAmount,
+                    loseAmount: playerOneLoseAmount
+                )
                 Spacer()
-                
-                Text("VS")
-                    .bold()
-                    .font(.system(size: 62))
-                    .foregroundStyle(.yellow)
-                
+                VSView()
                 Spacer()
-
-                Image("SportRedEmoji")
-                    .resizable()
-                    .frame(width: 85.65, height: 99.52)
-                
-                HStack {
-                    Text("23")
-                        .bold()
-                        .font(.system(size: 21))
-                        .foregroundStyle(.yellow)
-                    Text("Victories/")
-                        .bold()
-                        .font(.system(size: 21))
-                        .foregroundStyle(.white)
-                }
-                HStack {
-                    Text("1")
-                        .bold()
-                        .font(.system(size: 21))
-                        .foregroundStyle(.red)
-                    Text("Lose")
-                        .bold()
-                        .font(.system(size: 21))
-                        .foregroundStyle(.white)
-                }
-                
+                PlayerStatisticView(
+                    imageName: "SportRedEmoji",
+                    imageWidth: 85.65,
+                    imageHeight: 99.52,
+                    victoriesAmount: playerTwoVictoriesAmount,
+                    loseAmount: playerTwoLoseAmount
+                )
                 Spacer()
-
-                Text("Get ready...")
-                    .bold()
-                    .font(.system(size: 21))
-                    .foregroundStyle(.yellow)
+                GetReadyView()
                 Spacer()
             }
         }
