@@ -9,9 +9,11 @@ import Foundation
 
 class RoundViewModel: ObservableObject {
     @Published var game = GameModel()
+    @Published var animateChoice = false
     var timer: Timer?
     
     func chooseGesture(_ gesture: Choice) {
+        guard !game.isPaused else { return }
         game.player1Choice = gesture
        
         determineWinner()
@@ -35,22 +37,21 @@ class RoundViewModel: ObservableObject {
                 game.gameResult = "You Lose"
                 game.player2Wins += 1
             }
+            animateChoice.toggle()
         }
-
-    
-   
         game.player1Choice = nil
         game.player2Choice = nil
 
         if game.player1Wins == 3 || game.player2Wins == 3 {
             // Navigate to ResultView
+            print("конец игре")
             timer?.invalidate()
         }
     }
 
     func startTimer() {
        // game.timeRemaining = 30
-        game.isPaused = false
+       // game.isPaused = false
         self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             if self.game.timeRemaining > self.game.progress && !self.game.isPaused {
                 self.game.progress += 1
@@ -67,6 +68,8 @@ class RoundViewModel: ObservableObject {
     }
 
     func pauseTimer() {
+        game.isPaused.toggle()
+        
         if game.isPaused {
             timer?.invalidate()
         } else {

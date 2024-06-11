@@ -49,12 +49,18 @@ struct GameView: View {
             .navigationBarTitle(Text("ИГРА"), displayMode: .inline)
             
             .toolbar(content: {
-                Button(action: viewModel.pauseTimer, label: {
-                    Image(systemName: "pause.circle")
+                Button(action: {
+                    viewModel.pauseTimer()
+                }, label: {
+                    Image(systemName: viewModel.game.isPaused ? "play.circle" : "pause.circle")
                         .foregroundStyle(.black)
                     
                 })
+                .padding()
+                .contentShape(Rectangle())
+                .scaleEffect(CGSize(width: 2.0, height: 2.0))
         })
+            
         }
         
     }
