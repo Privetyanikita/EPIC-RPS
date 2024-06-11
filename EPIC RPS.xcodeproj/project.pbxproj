@@ -244,16 +244,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		84218BC72C1646970006D238 /* SupportingFails */ = {
-			isa = PBXGroup;
-			children = (
-				84FBEBFF2C15DC90005AF1A0 /* EPIC_RPSApp.swift */,
-				84FBEC032C15DC92005AF1A0 /* Assets.xcassets */,
-				84FBEC052C15DC92005AF1A0 /* Preview Content */,
-			);
-			path = SupportingFails;
-			sourceTree = "<group>";
-		};
 		84FBEBF32C15DC90005AF1A0 = {
 			isa = PBXGroup;
 			children = (
@@ -273,9 +263,11 @@
 		84FBEBFE2C15DC90005AF1A0 /* EPIC RPS */ = {
 			isa = PBXGroup;
 			children = (
+				84FBEBFF2C15DC90005AF1A0 /* EPIC_RPSApp.swift */,
+				84FBEC032C15DC92005AF1A0 /* Assets.xcassets */,
+				84FBEC052C15DC92005AF1A0 /* Preview Content */,
 				84218B942C16431F0006D238 /* Modules */,
 				84FBEC012C15DC90005AF1A0 /* ContentView.swift */,
-				84218BC72C1646970006D238 /* SupportingFails */,
 			);
 			path = "EPIC RPS";
 			sourceTree = "<group>";
