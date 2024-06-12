@@ -11,19 +11,27 @@ struct GameView: View {
     
     @StateObject private var viewModel = RoundViewModel()
     
-    @State private var offsetHand: CGFloat = 800
-   
+    private var offsetHand: CGFloat = 270
     private var totalHeight: CGFloat = 400.0
     
     var body: some View {
         NavigationView {
             ZStack {
                 BackgroundBlueView()
-                
-                Image(viewModel.game.player1Choice?.rawValue ?? "femaleHand")
-                    .offset(y: offsetHand)
-                Image(viewModel.game.player2Choice?.rawValue ?? "maleHand")
-                    .offset(y: -offsetHand)
+                VStack{
+                    HStack {
+                        Text("Игра")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .opacity(0.3)
+                  
+                    }
+                    Spacer()
+                }.padding(.top, 50)
+                Image(viewModel.returnIconHandName(.player2))
+                    .offset(x: -50, y: -offsetHand)
+                Image(viewModel.returnIconHandName(.player1))
+                    .offset(x: 50, y: offsetHand)
                 
                 HStack {
                     TimerView(progress: viewModel.game.progress, totalValue: viewModel.game.timeRemaining)
@@ -36,25 +44,27 @@ struct GameView: View {
                 
                 Text(viewModel.game.gameResult ?? "FIGHT")
                     .foregroundStyle(.orange)
-                    .font(.headline)
+                    .font(.largeTitle)
                 
             }
             .padding(.bottom, 50)
             .onAppear {
                 viewModel.startTimer()
+                viewModel.playMusic()
             }
             .onDisappear {
                 viewModel.timer?.invalidate()
             }
-            .navigationBarTitle(Text("ИГРА"), displayMode: .inline)
             
             .toolbar(content: {
                 Button(action: viewModel.pauseTimer, label: {
-                    Image(systemName: "pause.circle")
+                    Image(systemName: viewModel.game.isPaused ? "play.circle" : "pause.circle")
                         .foregroundStyle(.black)
-                    
+                        .scaleEffect(x: 2, y: 2)
+                        .padding()
                 })
         })
+            
         }
         
     }

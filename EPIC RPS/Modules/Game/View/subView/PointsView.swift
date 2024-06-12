@@ -23,13 +23,13 @@ struct PointsView: View {
                 .overlay(alignment: .bottom) {
                     RoundedRectangle(cornerRadius: 14)
                         .fill(.orange)
-                        .frame(width: 10, height: ((totalHeight / 2) * (CGFloat(pointPlayer2) / CGFloat(3))))
+                        .frame(width: 10, height: ((totalHeight / 2) * (CGFloat(pointPlayer1) / CGFloat(3))))
                 }
             
                 .overlay(alignment: .top) {
                     RoundedRectangle(cornerRadius: 14)
                         .fill(.orange)
-                        .frame(width: 10, height: ((totalHeight / 2) * (CGFloat(pointPlayer1) / CGFloat(3))))
+                        .frame(width: 10, height: ((totalHeight / 2) * (CGFloat(pointPlayer2) / CGFloat(3))))
                 }
             
             Image(.alienEmoji)
