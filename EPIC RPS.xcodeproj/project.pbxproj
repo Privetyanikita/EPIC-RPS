@@ -18,6 +18,10 @@
 		5263BE072C165425008978A7 /* FightResuleLoosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BE062C165425008978A7 /* FightResuleLoosView.swift */; };
 		5263BE092C165486008978A7 /* ImageFightResultLoosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BE082C165486008978A7 /* ImageFightResultLoosView.swift */; };
 		5263BE0B2C16552B008978A7 /* CheckFightResultLoosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BE0A2C16552B008978A7 /* CheckFightResultLoosView.swift */; };
+		64891A412C19C802003C13A3 /* paper.wav in Resources */ = {isa = PBXBuildFile; fileRef = 64891A402C19C802003C13A3 /* paper.wav */; };
+		64891A442C19C88A003C13A3 /* scissors.wav in Resources */ = {isa = PBXBuildFile; fileRef = 64891A422C19C88A003C13A3 /* scissors.wav */; };
+		64891A452C19C88A003C13A3 /* rock.wav in Resources */ = {isa = PBXBuildFile; fileRef = 64891A432C19C88A003C13A3 /* rock.wav */; };
+		64891A472C19CCA1003C13A3 /* BattleMusic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 64891A462C19CCA1003C13A3 /* BattleMusic.wav */; };
 		84218BAA2C1644B80006D238 /* FightResultWinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BA92C1644B80006D238 /* FightResultWinView.swift */; };
 		84218BB02C16450B0006D238 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BAF2C16450B0006D238 /* GameModel.swift */; };
 		84218BB22C1645230006D238 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BB12C1645230006D238 /* GameView.swift */; };
@@ -54,6 +58,10 @@
 		5263BE062C165425008978A7 /* FightResuleLoosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightResuleLoosView.swift; sourceTree = "<group>"; };
 		5263BE082C165486008978A7 /* ImageFightResultLoosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFightResultLoosView.swift; sourceTree = "<group>"; };
 		5263BE0A2C16552B008978A7 /* CheckFightResultLoosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckFightResultLoosView.swift; sourceTree = "<group>"; };
+		64891A402C19C802003C13A3 /* paper.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = paper.wav; sourceTree = "<group>"; };
+		64891A422C19C88A003C13A3 /* scissors.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = scissors.wav; sourceTree = "<group>"; };
+		64891A432C19C88A003C13A3 /* rock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rock.wav; sourceTree = "<group>"; };
+		64891A462C19CCA1003C13A3 /* BattleMusic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BattleMusic.wav; sourceTree = "<group>"; };
 		84218BA92C1644B80006D238 /* FightResultWinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightResultWinView.swift; sourceTree = "<group>"; };
 		84218BAF2C16450B0006D238 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		84218BB12C1645230006D238 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -135,6 +143,10 @@
 		84218B972C16435D0006D238 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				64891A462C19CCA1003C13A3 /* BattleMusic.wav */,
+				64891A432C19C88A003C13A3 /* rock.wav */,
+				64891A422C19C88A003C13A3 /* scissors.wav */,
+				64891A402C19C802003C13A3 /* paper.wav */,
 				84218BA52C1644720006D238 /* Model */,
 				84218BA42C16446C0006D238 /* View */,
 				84218BA32C1644630006D238 /* ViewModel */,
@@ -380,8 +392,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64891A452C19C88A003C13A3 /* rock.wav in Resources */,
 				84FBEC072C15DC92005AF1A0 /* Preview Assets.xcassets in Resources */,
+				64891A412C19C802003C13A3 /* paper.wav in Resources */,
 				84FBEC042C15DC92005AF1A0 /* Assets.xcassets in Resources */,
+				64891A472C19CCA1003C13A3 /* BattleMusic.wav in Resources */,
+				64891A442C19C88A003C13A3 /* scissors.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
