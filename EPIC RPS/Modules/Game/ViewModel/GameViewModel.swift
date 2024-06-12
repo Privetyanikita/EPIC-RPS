@@ -45,12 +45,19 @@ class RoundViewModel: ObservableObject {
         if game.player1Wins == 3 || game.player2Wins == 3 {
             // Navigate to ResultView
             timer?.invalidate()
+        } else {
+     
+            timer?.invalidate()
+            timer = nil
+            startTimer(true)
         }
     }
 
-    func startTimer() {
-       // game.timeRemaining = 30
-        game.isPaused = false
+    func startTimer(_ isRestart: Bool = false) {
+        if isRestart {
+            game.progress = 0
+        }
+        
         self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             if self.game.timeRemaining > self.game.progress && !self.game.isPaused {
                 self.game.progress += 1
@@ -61,8 +68,7 @@ class RoundViewModel: ObservableObject {
                     self.game.gameResult = "You Lose"
                 }
             }
-           
-           
+
         }
     }
 
@@ -70,6 +76,7 @@ class RoundViewModel: ObservableObject {
         if game.isPaused {
             timer?.invalidate()
         } else {
+            game.isPaused = false
             startTimer()
         }
     }
