@@ -73,8 +73,6 @@ class RoundViewModel: ObservableObject {
                         return  "femaleHandPaper"
                     case .scissors:
                         return "femaleHandScissors"
-                    case .none:
-                        return "femaleHand"
                 }
             case .player1:
                 switch player1Choice {
@@ -84,8 +82,6 @@ class RoundViewModel: ObservableObject {
                         return "maleHandPaper"
                     case .scissors:
                         return "maleHandScissors"
-                    case .none:
-                        return "maleHand"
                 }
         }
     }
