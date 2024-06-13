@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct FightResultWinView: View {
+    
+    @ObservedObject var viewModel: FightResultViewModel
+    
     var body: some View {
-        ZStack {
-            Image("BackgroundBlueBlurred")
-                .resizable()
-                .ignoresSafeArea()
-            VStack {
-                ImageFightResultView()
-                CheckFightResultView()
-                ButtonFightResultView()
+        NavigationView {
+            ZStack {
+                viewModel.backgroundResult()
+                VStack {
+                    viewModel.playerImage()
+                    viewModel.checkResultGame()
+                    ButtonFightResultView()
+                }
             }
         }
     }
 }
 
+
 #Preview {
-    FightResultWinView()
+    FightResultWinView(viewModel: FightResultViewModel(resultGame: GameModel()))
 }
