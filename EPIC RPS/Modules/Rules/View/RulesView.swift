@@ -9,52 +9,51 @@ import SwiftUI
 
 struct RulesView: View {
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Button(action: {
-                    // Действие для кнопки назад
-                }) {
-                    Image(systemName: "chevron.left")
-                        .foregroundColor(.rulesFont)
-                        .padding()
-                }
-                Spacer()
-                Text("Rules")
-                    .font(.custom("Rubik", size: 25))
-                    .foregroundColor(.rulesFont)
-                Spacer()
-            }
-            .padding(.top, topSafeAreaInset)
-            .padding(.horizontal, 16)
-            
-            VStack(alignment: .leading, spacing: 16) {
-
-                ruleRow(number: "1", text: "Игра проводится между игроком и компьютером.")
-                
-                HStack(alignment: .top, spacing: 8) {
-                    ruleCircle(number: "2")
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Жесты:")
-                            .ruleText()
-                        gestureRow(imageName: "stone", text: "Кулак > Ножницы")
-                        gestureRow(imageName: "paper", text: "Бумага > Кулак")
-                        gestureRow(imageName: "scissors", text: "Ножницы > Бумага")
+        NavigationView {
+            VStack(alignment: .leading) {
+                HStack {
+                    NavigationLink(destination: HomeView()) {
+                        Image(systemName: "chevron.left")
+                            .foregroundColor(.rulesFont)
+                            .padding()
                     }
+                    Spacer()
                 }
+                .overlay(
+                    Text("Rules")
+                        .font(.custom("Rubik", size: 25))
+                        .foregroundColor(.rulesFont)
+                )
+                .padding(.top, topSafeAreaInset)
+                .padding(.horizontal, 16)
                 
-                ruleRow(number: "3", text: "У игрока есть 30 сек. для выбора жеста.")
+                VStack(alignment: .leading, spacing: 16) {
+                    ruleRow(number: "1", text: "Игра проводится между игроком и компьютером.")
+                    
+                    HStack(alignment: .top, spacing: 8) {
+                        ruleCircle(number: "2")
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Жесты:")
+                                .ruleText()
+                            gestureRow(imageName: "stone", text: "Кулак > Ножницы")
+                            gestureRow(imageName: "paper", text: "Бумага > Кулак")
+                            gestureRow(imageName: "scissors", text: "Ножницы > Бумага")
+                        }
+                    }
+                    
+                    ruleRow(number: "3", text: "У игрока есть 30 сек. для выбора жеста.")
+                    
+                    ruleRow(number: "4", text: "Игра ведётся до трёх побед одного из участников.")
+                    
+                    ruleRow(number: "5", text: "За каждую победу игрок получает 500 баллов, которые можно посмотреть на доске лидеров")
+                }
+                .padding(.horizontal, 20)
                 
-                ruleRow(number: "4", text: "Игра ведётся до трёх побед одного из участников.")
-                
-                ruleRow(number: "5", text: "За каждую победу игрок получает 500 баллов, которые можно посмотреть на доске лидеров")
+                Spacer()
             }
-            .padding(.top, 15)
-            .padding(.leading, 26)
-            
-            Spacer()
+            .background(Color.white)
+            .edgesIgnoringSafeArea(.all)
         }
-        .background(Color.white)
-        .edgesIgnoringSafeArea(.all)
     }
     
     func ruleRow(number: String, text: String) -> some View {
@@ -67,7 +66,7 @@ struct RulesView: View {
     
     func ruleCircle(number: String) -> some View {
         Circle()
-            .fill(.rulesList)
+            .fill(Color.rulesList)
             .frame(width: 29, height: 29)
             .overlay(
                 Text(number)
@@ -115,3 +114,6 @@ struct RulesView_Previews: PreviewProvider {
         RulesView()
     }
 }
+
+
+
