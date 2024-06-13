@@ -10,14 +10,10 @@ import SwiftUI
 struct ButtonFightResultView: View {
     var body: some View {
         HStack(spacing: 42) {
-            Button {
-                // action
-            } label: {
+            NavigationLink(destination: HomeView()) {
                 Image("homeButton")
             }
-            Button {
-                // action
-            } label: {
+            NavigationLink(destination: GameView()) {
                 Image("reButton")
             }
         }

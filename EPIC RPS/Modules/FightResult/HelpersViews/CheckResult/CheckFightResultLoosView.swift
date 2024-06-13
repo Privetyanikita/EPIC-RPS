@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct CheckFightResultLoosView: View {
+    
+    @ObservedObject var viewModel: FightResultViewModel
+    
     var body: some View {
         VStack {
-            Text("You lose")
+            Text("You Lose")
                 .bold()
                 .font(.system(size: 21))
-            Text("2 - 3")
+            Text("\(viewModel.onePlayer) - \(viewModel.twoPlayer)")
                 .font(.title)
                 .bold()
                 .foregroundStyle(.white)
@@ -23,5 +26,5 @@ struct CheckFightResultLoosView: View {
 }
 
 #Preview {
-    CheckFightResultLoosView()
+    CheckFightResultLoosView(viewModel: FightResultViewModel(resultGame: GameModel()))
 }
