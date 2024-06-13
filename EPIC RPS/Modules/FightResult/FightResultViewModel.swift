@@ -3,8 +3,8 @@ import SwiftUI
 
 final class FightResultViewModel: ObservableObject {
     
-    @Published var onePlayer = 0
-    @Published var twoPlayer = 0
+    @Published var onePlayer = 3
+    @Published var twoPlayer = 1
     
     private var resultGame: GameModel {
         didSet {

@@ -8,7 +8,7 @@
 import Foundation
 
 enum Choice: String, CaseIterable {
-    case rock, paper, scissors, none
+    case rock, paper, scissors
     
     func beats(_ other: Choice) -> Bool {
         switch (self, other) {
