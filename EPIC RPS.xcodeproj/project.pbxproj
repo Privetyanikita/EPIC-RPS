@@ -12,6 +12,7 @@
 		227EDC612C18AC2700EC9A77 /* VSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227EDC602C18AC2700EC9A77 /* VSView.swift */; };
 		227EDC632C18ACE800EC9A77 /* GetReadyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227EDC622C18ACE800EC9A77 /* GetReadyView.swift */; };
 		227EDC652C18AD4E00EC9A77 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227EDC642C18AD4E00EC9A77 /* BackgroundView.swift */; };
+		522AAD732C1C687200234C59 /* StoreageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522AAD722C1C687200234C59 /* StoreageManager.swift */; };
 		524C231B2C1A31110083F159 /* FightResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524C231A2C1A31110083F159 /* FightResultViewModel.swift */; };
 		524C231D2C1B02800083F159 /* BackgroungResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524C231C2C1B02800083F159 /* BackgroungResultView.swift */; };
 		524C231F2C1B02B80083F159 /* BackgroundRsultLoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524C231E2C1B02B80083F159 /* BackgroundRsultLoseView.swift */; };
@@ -55,6 +56,7 @@
 		227EDC602C18AC2700EC9A77 /* VSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSView.swift; sourceTree = "<group>"; };
 		227EDC622C18ACE800EC9A77 /* GetReadyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReadyView.swift; sourceTree = "<group>"; };
 		227EDC642C18AD4E00EC9A77 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		522AAD722C1C687200234C59 /* StoreageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreageManager.swift; sourceTree = "<group>"; };
 		524C231A2C1A31110083F159 /* FightResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightResultViewModel.swift; sourceTree = "<group>"; };
 		524C231C2C1B02800083F159 /* BackgroungResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroungResultView.swift; sourceTree = "<group>"; };
 		524C231E2C1B02B80083F159 /* BackgroundRsultLoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundRsultLoseView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		522AAD712C1C578500234C59 /* UserDefaultsManager */ = {
+			isa = PBXGroup;
+			children = (
+				522AAD722C1C687200234C59 /* StoreageManager.swift */,
+			);
+			path = UserDefaultsManager;
+			sourceTree = "<group>";
+		};
 		524C23202C1B045A0083F159 /* HelpersViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +156,7 @@
 		84218B942C16431F0006D238 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				522AAD712C1C578500234C59 /* UserDefaultsManager */,
 				84218B952C1643310006D238 /* Home */,
 				84218B962C16433B0006D238 /* Rules */,
 				84218B982C1643770006D238 /* Fight Load */,
@@ -447,6 +458,7 @@
 				84218BC42C1645DC0006D238 /* HomeView.swift in Sources */,
 				84218BB62C1645560006D238 /* FightLoadViewModel.swift in Sources */,
 				84218BBA2C1645810006D238 /* FightLoadModel.swift in Sources */,
+				522AAD732C1C687200234C59 /* StoreageManager.swift in Sources */,
 				5263BE0B2C16552B008978A7 /* CheckFightResultLoosView.swift in Sources */,
 				84218BBC2C1645970006D238 /* RulesViewModel.swift in Sources */,
 				5263BE022C164CB7008978A7 /* ButtonFightResultView.swift in Sources */,

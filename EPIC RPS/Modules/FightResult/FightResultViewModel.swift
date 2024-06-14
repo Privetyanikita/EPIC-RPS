@@ -16,17 +16,7 @@ final class FightResultViewModel: ObservableObject {
     init(resultGame: GameModel) {
         self.resultGame = resultGame
     }
-    
-    func fightResult() -> String {
-        let resultWin = "You Win"
-        let resultLose = "You Lose"
-        if onePlayer > twoPlayer {
-            return resultWin
-        } else {
-            return resultLose
-        }
-    }
-    
+        
     @ViewBuilder
     func playerImage() -> some View {
         if onePlayer > twoPlayer {
