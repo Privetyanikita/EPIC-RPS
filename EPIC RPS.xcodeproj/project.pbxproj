@@ -119,6 +119,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		225CA0F32C1C1A640020A326 /* Helpers Views */ = {
+			isa = PBXGroup;
+			children = (
+				227EDC5E2C188BFC00EC9A77 /* PlayerStatisticView.swift */,
+				227EDC5C2C18895700EC9A77 /* PlayerAvatarView.swift */,
+				227EDC602C18AC2700EC9A77 /* VSView.swift */,
+				227EDC622C18ACE800EC9A77 /* GetReadyView.swift */,
+				227EDC642C18AD4E00EC9A77 /* BackgroundView.swift */,
+			);
+			path = "Helpers Views";
+			sourceTree = "<group>";
+		};
 		524C23202C1B045A0083F159 /* HelpersViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,11 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				84218BB72C1645680006D238 /* FightLoadView.swift */,
-				227EDC5E2C188BFC00EC9A77 /* PlayerStatisticView.swift */,
-				227EDC5C2C18895700EC9A77 /* PlayerAvatarView.swift */,
-				227EDC602C18AC2700EC9A77 /* VSView.swift */,
-				227EDC622C18ACE800EC9A77 /* GetReadyView.swift */,
-				227EDC642C18AD4E00EC9A77 /* BackgroundView.swift */,
+				225CA0F32C1C1A640020A326 /* Helpers Views */,
 			);
 			path = View;
 			sourceTree = "<group>";

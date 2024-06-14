@@ -1,5 +1,5 @@
 //
-//  GetReadyView.swift
+//  VSView.swift
 //  EPIC RPS
 //
 //  Created by Денис Гиндулин on 11.06.2024.
@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct GetReadyView: View {
+struct VSView: View {
     var body: some View {
-        Text("Get ready...")
-            .bold()
-            .font(.system(size: 21))
+        Text("VS")
+            .fontWeight(.heavy)
+            .font(.system(size: 62))
             .foregroundStyle(.youwin)
     }
 }
 
 #Preview {
-    GetReadyView()
+    VSView()
 }

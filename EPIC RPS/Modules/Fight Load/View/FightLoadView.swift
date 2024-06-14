@@ -2,43 +2,51 @@
 //  FightLoadView.swift
 //  EPIC RPS
 //
-//  Created by NikitaKorniuk   on 09.06.24.
+//  Created by Denis Gindulin on 09.06.24.
 //
 
 import SwiftUI
 
 struct FightLoadView: View {
-    // количество побед и поражений игроков, которое обновляется перед началом игры
-    private var playerOneVictoriesAmount = 10
-    private var playerOneLoseAmount = 2
-    private var playerTwoVictoriesAmount = 23
-    private var playerTwoLoseAmount = 1
+    @ObservedObject var fLViewModel = FightLoadViewModel(resultGame: GameModel())
 
+    @State private var gameViewIsOn = false
+    
     var body: some View {
-        ZStack {
-            BackgroundView()
-            VStack {
-                Spacer()
-                PlayerStatisticView(
-                    imageName: "AlienEmoji",
-                    imageWidth: 87,
-                    imageHeight: 100.47,
-                    victoriesAmount: playerOneVictoriesAmount,
-                    loseAmount: playerOneLoseAmount
-                )
-                Spacer()
-                VSView()
-                Spacer()
-                PlayerStatisticView(
-                    imageName: "SportRedEmoji",
-                    imageWidth: 85.65,
-                    imageHeight: 99.52,
-                    victoriesAmount: playerTwoVictoriesAmount,
-                    loseAmount: playerTwoLoseAmount
-                )
-                Spacer()
-                GetReadyView()
-                Spacer()
+        NavigationView {
+            ZStack {
+                BackgroundView()
+                VStack {
+                    Spacer()
+                    PlayerStatisticView(
+                        imageName: "AlienEmoji",
+                        imageWidth: 87,
+                        imageHeight: 100.47,
+                        victoriesAmount: fLViewModel.firstPlayerVictoriesAmount,
+                        loseAmount: fLViewModel.firstPlayerLoseAmount
+                    )
+                    Spacer()
+                    VSView()
+                    Spacer()
+                    PlayerStatisticView(
+                        imageName: "SportRedEmoji",
+                        imageWidth: 85.65,
+                        imageHeight: 99.52,
+                        victoriesAmount: fLViewModel.secondPlayerVictoriesAmount,
+                        loseAmount: fLViewModel.secondPlayerLoseAmount
+                    )
+                    Spacer()
+                    GetReadyView()
+                    Spacer()
+                    NavigationLink(destination: GameView(), isActive: $gameViewIsOn) {
+                        EmptyView()
+                    }
+                }
+            }
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.gameViewIsOn = true
             }
         }
     }
@@ -47,3 +55,4 @@ struct FightLoadView: View {
 #Preview {
     FightLoadView()
 }
+        
