@@ -19,22 +19,23 @@ struct PlayerStatisticView: View {
             PlayerAvatarView(imageName: imageName, width: imageWidth, height: imageHeight)
             HStack {
                 Text(victoriesAmount.formatted())
-                    .bold()
+                    .fontWeight(.heavy)
                     .foregroundStyle(.youwin)
                 Text("Victories/")
-                    .bold()
+                    .fontWeight(.heavy)
                     .foregroundStyle(.white)
             }
             HStack {
                 Text(loseAmount.formatted())
-                    .bold()
+                    .fontWeight(.heavy)
                     .foregroundStyle(.red)
                 Text("Lose")
-                    .bold()
+                    .fontWeight(.heavy)
                     .foregroundStyle(.white)
             }
         }
         .font(.system(size: 21))
+        
 
         
     }
