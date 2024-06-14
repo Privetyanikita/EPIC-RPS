@@ -25,6 +25,9 @@
 		764988862C1C8B710047D359 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764988852C1C8B710047D359 /* SettingsView.swift */; };
 		764988882C1CA69D0047D359 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 764988872C1CA69D0047D359 /* Poppins-Bold.ttf */; };
 		7649888A2C1CA7D50047D359 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 764988892C1CA7D50047D359 /* Poppins-Regular.ttf */; };
+		7649888C2C1CAF5B0047D359 /* PixelDreams.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7649888B2C1CAF5B0047D359 /* PixelDreams.wav */; };
+		7649888E2C1CB0A70047D359 /* Domination.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7649888D2C1CB0A70047D359 /* Domination.wav */; };
+		764988902C1CB1F80047D359 /* Odyssey.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7649888F2C1CB1F80047D359 /* Odyssey.wav */; };
 		7651CFD32C1B330600A64694 /* DelaGothicOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7651CFD22C1B330600A64694 /* DelaGothicOne-Regular.ttf */; };
 		76C7DCC22C1C56A60031C518 /* Rubik-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76C7DCC12C1C56A60031C518 /* Rubik-VariableFont_wght.ttf */; };
 		84218BAA2C1644B80006D238 /* FightResultWinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BA92C1644B80006D238 /* FightResultWinView.swift */; };
@@ -70,6 +73,9 @@
 		764988852C1C8B710047D359 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		764988872C1CA69D0047D359 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../../../../../../Downloads/Poppins/Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		764988892C1CA7D50047D359 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../../../../../../Downloads/Poppins/Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		7649888B2C1CAF5B0047D359 /* PixelDreams.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = PixelDreams.wav; path = ../../../../../../Downloads/PixelDreams.wav; sourceTree = "<group>"; };
+		7649888D2C1CB0A70047D359 /* Domination.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Domination.wav; path = ../../../../../../Downloads/Domination.wav; sourceTree = "<group>"; };
+		7649888F2C1CB1F80047D359 /* Odyssey.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Odyssey.wav; path = ../../../../../../Downloads/Odyssey.wav; sourceTree = "<group>"; };
 		7651CFD22C1B330600A64694 /* DelaGothicOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DelaGothicOne-Regular.ttf"; sourceTree = "<group>"; };
 		7651CFD42C1B33DF00A64694 /* EPIC-RPS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "EPIC-RPS-Info.plist"; sourceTree = SOURCE_ROOT; };
 		76C7DCC12C1C56A60031C518 /* Rubik-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-VariableFont_wght.ttf"; path = "../../../../../../../Downloads/Rubik/Rubik-VariableFont_wght.ttf"; sourceTree = "<group>"; };
@@ -173,6 +179,9 @@
 		84218B972C16435D0006D238 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				7649888F2C1CB1F80047D359 /* Odyssey.wav */,
+				7649888D2C1CB0A70047D359 /* Domination.wav */,
+				7649888B2C1CAF5B0047D359 /* PixelDreams.wav */,
 				64891A462C19CCA1003C13A3 /* BattleMusic.wav */,
 				64891A432C19C88A003C13A3 /* rock.wav */,
 				64891A422C19C88A003C13A3 /* scissors.wav */,
@@ -425,7 +434,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7649888E2C1CB0A70047D359 /* Domination.wav in Resources */,
 				64891A452C19C88A003C13A3 /* rock.wav in Resources */,
+				7649888C2C1CAF5B0047D359 /* PixelDreams.wav in Resources */,
 				764988882C1CA69D0047D359 /* Poppins-Bold.ttf in Resources */,
 				84FBEC072C15DC92005AF1A0 /* Preview Assets.xcassets in Resources */,
 				64891A412C19C802003C13A3 /* paper.wav in Resources */,
@@ -434,6 +445,7 @@
 				64891A442C19C88A003C13A3 /* scissors.wav in Resources */,
 				7651CFD32C1B330600A64694 /* DelaGothicOne-Regular.ttf in Resources */,
 				76C7DCC22C1C56A60031C518 /* Rubik-VariableFont_wght.ttf in Resources */,
+				764988902C1CB1F80047D359 /* Odyssey.wav in Resources */,
 				7649888A2C1CA7D50047D359 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
