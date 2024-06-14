@@ -12,33 +12,71 @@ import AVFoundation
 class RoundViewModel: ObservableObject {
     enum NumPlayer {
         case player1 //  человек
-        case player2 // комп
+        case player2 // комп / или второй человек
     }
 
     @Published var game = GameModel()
     var timer: Timer?
-    var soundPlayer: AVAudioPlayer?
-    var musicPlayer: AVAudioPlayer?
+    private var soundPlayer: AVAudioPlayer?
+    private var musicPlayer: AVAudioPlayer?
+    private var nextPlayerButtonPress: Bool = false
+    private var tempChoice1: Choice?
+    private var tempChoice2: Choice?
+    @Published var showResult: Bool = false
     
     func chooseGesture(_ gesture: Choice) {
         guard timer?.isValid == true  else { return }
-      
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self, gesture]  in
-            guard let self = self else { return }
-            game.player1Choice = gesture
-            self.playSound(named: gesture.rawValue)
-            self.determineWinner()
+        if  game.twoPlayerGame && tempChoice1 != nil && nextPlayerButtonPress == false {
+            return
+        }
+        
+        if !game.twoPlayerGame {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self, gesture]  in
+                guard let self = self else { return }
+                game.player1Choice = gesture
+                self.playSound(named: gesture.rawValue)
+                choiceVirtualPlayer()
+                self.determineWinner()
+            }
+        } else {
+            if tempChoice1 == nil {
+                tempChoice1 = gesture
+            } else {
+                tempChoice2 = gesture
+            }
+            if tempChoice1 != nil && tempChoice2 != nil {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self]  in
+                    guard let self = self else { return }
+                    self.game.player1Choice = self.tempChoice1
+                    self.game.player2Choice = self.tempChoice2
+                    
+                    self.determineWinner()
+                    self.tempChoice1 = nil
+                    self.tempChoice2 = nil
+                }
+            }
         }
        
     }
-
-    func determineWinner() {
-        guard let player1Choice = game.player1Choice else { return }
-
+    
+    func choiceVirtualPlayer() {
+        
         let gestures = Choice.allCases
         game.player2Choice = gestures.randomElement()
+    }
+    
+    func setupGestureIcon() {
+        
+    }
+    
+    func nextPlayer() {
+        nextPlayerButtonPress = true
+    }
 
-        if let player2Choice = game.player2Choice {
+    func determineWinner() {
+        guard let player1Choice = game.player1Choice,
+              let player2Choice = game.player2Choice else { return }
+
             if player1Choice == player2Choice {
                 game.gameResult = "DRAW"
             } else if (player1Choice == .rock && player2Choice == .scissors) ||
@@ -50,14 +88,22 @@ class RoundViewModel: ObservableObject {
                 game.gameResult = "You Lose"
                 game.player2Wins += 1
             }
-        }
+
       
         timer?.invalidate()
         if game.player1Wins == 3 || game.player2Wins == 3 {
             musicPlayer?.stop()
             // Navigate to ResultView
         } else {
-            startTimer(true)
+            showResult = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self]  in
+                guard let self = self else {return}
+                self.game.player1Choice = nil
+                self.game.player2Choice = nil
+                self.nextPlayerButtonPress = false
+                self.showResult = false
+                self.startTimer(true)
+            }
         }
     }
     
@@ -73,8 +119,6 @@ class RoundViewModel: ObservableObject {
                         return  "femaleHandPaper"
                     case .scissors:
                         return "femaleHandScissors"
-                    case .none:
-                        return "femaleHand"
                 }
             case .player1:
                 switch player1Choice {
@@ -84,8 +128,6 @@ class RoundViewModel: ObservableObject {
                         return "maleHandPaper"
                     case .scissors:
                         return "maleHandScissors"
-                    case .none:
-                        return "maleHand"
                 }
         }
     }
@@ -136,7 +178,7 @@ class RoundViewModel: ObservableObject {
     }
     
      func playMusic() {
-        
+        return
         guard let soundURL = Bundle.main.url(forResource: "BattleMusic" , withExtension: "wav") else { return }
         
         do {

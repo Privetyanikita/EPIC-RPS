@@ -8,7 +8,7 @@
 import Foundation
 
 enum Choice: String, CaseIterable {
-    case rock, paper, scissors, none
+    case rock, paper, scissors
     
     func beats(_ other: Choice) -> Bool {
         switch (self, other) {
@@ -29,4 +29,5 @@ struct GameModel {
     var isPaused = false
     var timeRemaining: Double = 30
     var progress: Double = 0
+    var twoPlayerGame = true
 }
