@@ -23,6 +23,7 @@
 		64891A452C19C88A003C13A3 /* rock.wav in Resources */ = {isa = PBXBuildFile; fileRef = 64891A432C19C88A003C13A3 /* rock.wav */; };
 		64891A472C19CCA1003C13A3 /* BattleMusic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 64891A462C19CCA1003C13A3 /* BattleMusic.wav */; };
 		7651CFD32C1B330600A64694 /* DelaGothicOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7651CFD22C1B330600A64694 /* DelaGothicOne-Regular.ttf */; };
+		76C7DCC22C1C56A60031C518 /* Rubik-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76C7DCC12C1C56A60031C518 /* Rubik-VariableFont_wght.ttf */; };
 		84218BAA2C1644B80006D238 /* FightResultWinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BA92C1644B80006D238 /* FightResultWinView.swift */; };
 		84218BB02C16450B0006D238 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BAF2C16450B0006D238 /* GameModel.swift */; };
 		84218BB22C1645230006D238 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84218BB12C1645230006D238 /* GameView.swift */; };
@@ -65,6 +66,7 @@
 		64891A462C19CCA1003C13A3 /* BattleMusic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BattleMusic.wav; sourceTree = "<group>"; };
 		7651CFD22C1B330600A64694 /* DelaGothicOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DelaGothicOne-Regular.ttf"; sourceTree = "<group>"; };
 		7651CFD42C1B33DF00A64694 /* EPIC-RPS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "EPIC-RPS-Info.plist"; sourceTree = SOURCE_ROOT; };
+		76C7DCC12C1C56A60031C518 /* Rubik-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-VariableFont_wght.ttf"; path = "../../../../../../../Downloads/Rubik/Rubik-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		84218BA92C1644B80006D238 /* FightResultWinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightResultWinView.swift; sourceTree = "<group>"; };
 		84218BAF2C16450B0006D238 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		84218BB12C1645230006D238 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 		84218B9E2C1644130006D238 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				76C7DCC12C1C56A60031C518 /* Rubik-VariableFont_wght.ttf */,
 				7651CFD22C1B330600A64694 /* DelaGothicOne-Regular.ttf */,
 				84218BBD2C1645A90006D238 /* RulesView.swift */,
 			);
@@ -404,6 +407,7 @@
 				64891A472C19CCA1003C13A3 /* BattleMusic.wav in Resources */,
 				64891A442C19C88A003C13A3 /* scissors.wav in Resources */,
 				7651CFD32C1B330600A64694 /* DelaGothicOne-Regular.ttf in Resources */,
+				76C7DCC22C1C56A60031C518 /* Rubik-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
