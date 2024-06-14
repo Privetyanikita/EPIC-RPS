@@ -29,4 +29,5 @@ struct GameModel {
     var isPaused = false
     var timeRemaining: Double = 30
     var progress: Double = 0
+    var twoPlayerGame = true
 }
