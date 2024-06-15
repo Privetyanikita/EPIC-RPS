@@ -13,7 +13,6 @@ struct FightLoadView: View {
     @State private var gameViewIsOn = false
     
     var body: some View {
- //       NavigationView {
             ZStack {
                 BackgroundView()
                 VStack {
@@ -37,10 +36,8 @@ struct FightLoadView: View {
                     )
                     Spacer()
                     GetReadyView()
-//                    Spacer()
-//                    NavigationLink(destination: GameView(), isActive: $gameViewIsOn) {
-//                        EmptyView()
-//                    }
+                    Spacer()
+
                 }
                 .fullScreenCover(isPresented: $gameViewIsOn) { GameView() }
             }
@@ -49,8 +46,7 @@ struct FightLoadView: View {
                     self.gameViewIsOn = true
                 }
         }
-       
-  //      }
+
     }
 }
 
