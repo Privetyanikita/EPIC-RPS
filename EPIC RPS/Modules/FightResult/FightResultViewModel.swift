@@ -20,6 +20,8 @@ final class FightResultViewModel: ObservableObject {
     
     init(resultGame: GameModel) {
         self.resultGame = resultGame
+        self.onePlayer = resultGame.player1Wins
+        self.twoPlayer = resultGame.player2Wins
         self.firstPlayerWins = storage.int(forKey: .playerOneCountWinsGames) ?? 0
         self.secondPlayerWins = storage.int(forKey: .playerTwoCountWinsGames) ?? 0
         self.firstPlayerLoose = storage.int(forKey: .playerOneCountLooseGames) ?? 0
