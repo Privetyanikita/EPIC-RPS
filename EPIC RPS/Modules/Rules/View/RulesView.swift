@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct RulesView: View {
+    
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
                 HStack {
-                    NavigationLink(destination: HomeView()) {
+                    Button(action: {dismiss()}, label: {
                         Image(systemName: "chevron.left")
                             .foregroundColor(.rulesFont)
-                            .padding()
-                    }
+                    })
                     Spacer()
                 }
                 .overlay(

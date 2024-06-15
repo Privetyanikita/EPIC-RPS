@@ -7,20 +7,44 @@
 
 import SwiftUI
 
-struct SettingsView: View {
-    @State private var gameDuration: Int = 30
-    @State private var backgroundMusic: String = "Мелодия 1"
-    @State private var playWithFriend: Bool = true
+enum melody: String, CaseIterable {
+    case melody1 = "Odyssey"
+    case melody2 = "Domination"
+    case melody3 = "PixelDreams"
+    case melody4 = "BattleMusic"
     
+//    func returnName() -> String {
+//        switch self {
+//            case .melody1:
+//                "Odyssey"
+//            case .melody2:
+//                "Domination"
+//            case .melody3:
+//                "PixelDreams"
+//            case .melody4:
+//                "BattleMusic"
+//        }
+//    }
+}
+
+struct SettingsView: View {
+
+    @AppStorage("time") private var gameDuration: Int = 30
+    @AppStorage("melody") private var backgroundMusic: melody = .melody4
+    @AppStorage("twoPlayer") private var playWithFriend: Bool = true
+    
+    @State private var isMusicPickerPresented: Bool = false
+    @Environment(\.dismiss) var dismiss
     var body: some View {
         
         NavigationView {
             VStack(spacing: 30) {
                 HStack {
-                    NavigationLink(destination: HomeView()) {
+                    Button(action: {dismiss()}, label: {
                         Image(systemName: "chevron.left")
                             .foregroundColor(.rulesFont)
-                    }
+                    })
+
                     Spacer()
                 }
                 .overlay(
@@ -79,11 +103,19 @@ struct SettingsView: View {
                             .font(.custom("Poppins-Bold", size: 16))
                             .foregroundColor(.white)
                         Spacer()
-                        Text(backgroundMusic)
-                            .font(.custom("Poppins-Regular", size: 14))
-                            .foregroundColor(.settingGray)
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(.settingGray)
+                       
+                        Button(action: {
+                            isMusicPickerPresented.toggle()
+                        }) {
+                            Text(backgroundMusic.rawValue)
+                                .font(.custom("Poppins-Regular", size: 14))
+                                .foregroundColor(.settingGray)
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(.settingGray)
+                        }
+                        .sheet(isPresented: $isMusicPickerPresented) {
+                            MusicPickerView(backgroundMusic: $backgroundMusic)
+                        }
                     }
                     .padding(20)
                     .background(.settingButton)
@@ -106,6 +138,8 @@ struct SettingsView: View {
                 
                 Spacer()
             }
+//            .navigationTitle("Settings")
+//            .navigationBarTitleDisplayMode(.large)
             .padding()
         }
     }
@@ -113,4 +147,27 @@ struct SettingsView: View {
 
 #Preview {
     SettingsView()
+}
+
+struct MusicPickerView: View {
+    @Environment(\.dismiss) var dismiss
+    @Binding var backgroundMusic: melody
+    let musicOptions = melody.allCases
+
+    var body: some View {
+        NavigationView {
+            Form {
+                Picker("Выберите мелодию", selection: $backgroundMusic) {
+                    ForEach(musicOptions, id: \.self) { music in
+                        Text(music.rawValue)
+                    }
+                }
+                .pickerStyle(.inline)
+            }
+            .navigationBarTitle("Выбор музыки", displayMode: .inline)
+            .navigationBarItems(trailing: Button("Готово") {
+               dismiss()
+            })
+        }
+    }
 }
