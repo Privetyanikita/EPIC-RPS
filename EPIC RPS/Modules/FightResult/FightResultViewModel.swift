@@ -15,6 +15,8 @@ final class FightResultViewModel: ObservableObject {
     
     init(resultGame: GameModel) {
         self.resultGame = resultGame
+        self.onePlayer = resultGame.player1Wins
+        self.twoPlayer = resultGame.player2Wins
     }
         
     @ViewBuilder
