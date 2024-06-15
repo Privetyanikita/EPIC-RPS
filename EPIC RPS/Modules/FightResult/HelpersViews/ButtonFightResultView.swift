@@ -8,16 +8,34 @@
 import SwiftUI
 
 struct ButtonFightResultView: View {
+    @State  var isHome: Bool = false
+    @State  var isGame: Bool = false
+    
     var body: some View {
         HStack(spacing: 42) {
-            NavigationLink(destination: HomeView()) {
+           
+            Button {
+                isHome = true
+            } label: {
                 Image("homeButton")
             }
-            NavigationLink(destination: GameView()) {
+
+            Button {
+                isGame = true
+            } label: {
                 Image("reButton")
             }
+               
+            
+            
         }
         .padding(.top, 34)
+        .fullScreenCover(isPresented: $isHome) {
+            HomeView()
+                            }
+        .fullScreenCover(isPresented: $isGame) {
+            GameView()
+                            }
     }
 }
 

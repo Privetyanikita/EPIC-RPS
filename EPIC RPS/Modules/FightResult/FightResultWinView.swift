@@ -12,7 +12,6 @@ struct FightResultWinView: View {
     @ObservedObject var viewModel: FightResultViewModel
     
     var body: some View {
-        NavigationView {
             ZStack {
                 viewModel.backgroundResult()
                 VStack {
@@ -22,7 +21,6 @@ struct FightResultWinView: View {
                 }
             }
         }
-    }
 }
 
 

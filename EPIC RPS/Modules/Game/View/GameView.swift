@@ -18,6 +18,7 @@ struct GameView: View {
         viewModel.showResult ? 70 : 0
     }
     @State var goMainView = false
+    @State var showAlert = false
     
     var body: some View {
         GeometryReader{ geometry in
@@ -25,7 +26,7 @@ struct GameView: View {
                 BackgroundBlueView()
               
                     HStack {
-                        Button { goMainView = true } label: {
+                        Button { showAlert = true} label: {
                             Image(systemName: "chevron.left")
                             .foregroundColor(.rulesFont) }
                         Spacer()
@@ -57,15 +58,10 @@ struct GameView: View {
                 
                 ButtonsView(isTwoPlayer: viewModel.game.twoPlayerGame, selectChoice: viewModel.chooseGesture(_:), nextPlayerAction: viewModel.nextPlayer, geometry: geometry)
                 
-                Text(viewModel.game.gameResult ?? "FIGHT")
-                    .foregroundStyle(.orange)
-                    .font(.largeTitle)
-                NavigationLink(destination: FightLoadView(fLViewModel: FightLoadViewModel(resultGame: viewModel.game)),
-                               isActive: $viewModel.showFightResultView) {
-                    EmptyView()
-                }
-                NavigationLink(destination:  HomeView(), isActive: $goMainView) {
-                   EmptyView()
+                if !viewModel.game.twoPlayerGame {
+                    Text(viewModel.game.gameResult ?? "FIGHT")
+                        .foregroundStyle(.orange)
+                        .font(.largeTitle)
                 }
             }
             .padding(.bottom, 50)
@@ -74,27 +70,27 @@ struct GameView: View {
                 viewModel.playMusic()
             }
             .onDisappear {
-                viewModel.timer?.invalidate()
+                viewModel.clearAllAV()
             }
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    Text("Игра").font(.largeTitle)
-                }
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: viewModel.pauseTimer, label: {
-                        Image(systemName: viewModel.game.isPaused ? "play.circle" : "pause.circle")
-                            .foregroundStyle(.black)
-                            .scaleEffect(x: 2, y: 2)
-                            .padding()
-                    })
-                }
-                ToolbarItem(placement: .topBarLeading) {
-                    Button { goMainView = true } label: {
-                        Image(systemName: "chevron.left")
-                        .foregroundColor(.rulesFont) }
+            .fullScreenCover(isPresented: $viewModel.showFightResultView, content: {
+                FightResultWinView(viewModel: FightResultViewModel(resultGame: viewModel.sendScore()))
+                
+            })
+            .fullScreenCover(isPresented: $goMainView, content: {
+               HomeView()
+            })
+            .alert("Вернуться на главное меню?", isPresented: $showAlert) {
+                HStack{
+                    Button("Да"){
+                        
+                        goMainView = true
+                       
+                    }
+                    Button("Нет") {
+                        
+                    }
                 }
             }
-            .navigationBarBackButtonHidden(true)
         }
     }
 }
@@ -104,11 +100,6 @@ struct ContentView_Previews: PreviewProvider {
         GameView()
             .previewDevice(PreviewDevice(rawValue: "iPhone 15"))
         
-       
-//            GameView()
-//                .previewDevice(PreviewDevice(rawValue: "iPhone SE (3rd generation)"))
-//                .previewDisplayName("iPhone se")
-//        
       
         
     }

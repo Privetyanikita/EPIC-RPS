@@ -30,14 +30,13 @@ class RoundViewModel: ObservableObject {
     private var storage = StoreageManager()
     
     init() {
-        let isTwoPlayer =  storage.bool(forKey: .twoPlayer) ?? false
+        let isTwoPlayer =  storage.bool(forKey: .twoPlayer) ?? true
         let musicName = storage.string(forKey: .melody) ?? "BattleMusic"
         let time = storage.int(forKey: .time) ?? 30
         self.musicName = musicName
         game.timeRemaining = Double(time)
         game.twoPlayerGame = isTwoPlayer
-        
-     
+
     }
     
     func chooseGesture(_ gesture: Choice) {
@@ -81,10 +80,18 @@ class RoundViewModel: ObservableObject {
         game.player2Choice = gestures.randomElement()
     }
     
-    func setupGestureIcon() {
-        
+    func clearAllAV() {
+        soundPlayer = nil
+        musicPlayer = nil
+        timer?.invalidate()
+        timer = nil
     }
     
+    func sayScore() {
+        print(game.player2Wins)
+        print(game.player1Wins)
+        
+    }
     func nextPlayer() {
         nextPlayerButtonPress = true
     }
@@ -196,20 +203,28 @@ class RoundViewModel: ObservableObject {
         }
     }
     
+    func sendScore() -> GameModel {
+        var  gameModel = GameModel()
+        gameModel.player1Wins = game.player1Wins
+        gameModel.player2Wins = game.player2Wins
+        return gameModel
+    }
+    
+    
      func playMusic() {
       
-//         if let musicPlayer = musicPlayer, musicPlayer.isPlaying {
-//             musicPlayer.stop()
-//         }
-//        guard let soundURL = Bundle.main.url(forResource: musicName, withExtension: "wav") else { return }
-//        
-//        do {
-//            musicPlayer = try AVAudioPlayer(contentsOf: soundURL)
-//            musicPlayer?.numberOfLoops = -1
-//            musicPlayer?.play()
-//        } catch {
-//            print("Error: Could not play sound \(soundURL)")
-//        }
+         if let musicPlayer = musicPlayer, musicPlayer.isPlaying {
+             musicPlayer.stop()
+         }
+        guard let soundURL = Bundle.main.url(forResource: musicName, withExtension: "wav") else { return }
+        
+        do {
+            musicPlayer = try AVAudioPlayer(contentsOf: soundURL)
+            musicPlayer?.numberOfLoops = -1
+            musicPlayer?.play()
+        } catch {
+            print("Error: Could not play sound \(soundURL)")
+        }
     }
 
     deinit {
