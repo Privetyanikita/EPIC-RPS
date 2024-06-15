@@ -37,7 +37,7 @@ struct PointsView: View {
                 .frame(width: 35, height: 35)
                 .offset(y: -totalHeight / 2 )
             
-            Image(.batmanEmoji)
+            Image(.sportRedEmoji)
                 .resizable()
                 .frame(width: 35, height: 35)
                 .offset(y: totalHeight / 2 )

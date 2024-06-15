@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FightLoadView: View {
-    @ObservedObject var fLViewModel = FightLoadViewModel(resultGame: GameModel())
+    @ObservedObject var fLViewModel = FightLoadViewModel()
 
     @State private var gameViewIsOn = false
     
@@ -21,8 +21,8 @@ struct FightLoadView: View {
                         imageName: "AlienEmoji",
                         imageWidth: 87,
                         imageHeight: 100.47,
-                        victoriesAmount: fLViewModel.firstPlayerVictoriesAmount,
-                        loseAmount: fLViewModel.firstPlayerLoseAmount
+                        victoriesAmount: fLViewModel.secondPlayerVictoriesAmount,
+                        loseAmount: fLViewModel.secondPlayerLoseAmount
                     )
                     Spacer()
                     VSView()
@@ -31,8 +31,8 @@ struct FightLoadView: View {
                         imageName: "SportRedEmoji",
                         imageWidth: 85.65,
                         imageHeight: 99.52,
-                        victoriesAmount: fLViewModel.secondPlayerVictoriesAmount,
-                        loseAmount: fLViewModel.secondPlayerLoseAmount
+                        victoriesAmount: fLViewModel.firstPlayerVictoriesAmount,
+                        loseAmount: fLViewModel.firstPlayerLoseAmount
                     )
                     Spacer()
                     GetReadyView()
