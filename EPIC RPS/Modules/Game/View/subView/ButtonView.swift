@@ -30,8 +30,7 @@ struct ChoiceButton: View {
                 return "paper"
             case .scissors:
                 return "scissors"
-            default:
-                return "hand.wave"
+
         }
     }
 }
