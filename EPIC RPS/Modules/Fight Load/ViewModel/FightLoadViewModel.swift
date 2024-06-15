@@ -9,32 +9,17 @@ import Foundation
 import SwiftUI
 
 final class FightLoadViewModel: ObservableObject {
+    @Published var firstPlayerVictoriesAmount = 0
+    @Published var firstPlayerLoseAmount = 0
     
-//    @Published var firstPlayerWinBeatsInRound = 0
-//    @Published var secondPlayerWinBeatsInRound = 0
+    @Published var secondPlayerVictoriesAmount = 0
+    @Published var secondPlayerLoseAmount = 0
+    private let storage = StoreageManager()
     
-    @Published var firstPlayerVictoriesAmount = 10
-//    @Published var firstPlayerVictoriesAmount: Int {
-//        if firstPlayerWinBeatsInRound > secondPlayerWinBeatsInRound {
-//            firstPlayerVictoriesAmount += 1
-//        }
-//
-//    }
-    @Published var firstPlayerLoseAmount = 2
-    
-    @Published var secondPlayerVictoriesAmount = 23
-    @Published var secondPlayerLoseAmount = 1
-    
-    private var resultGame: GameModel {
-        didSet {
-            firstPlayerVictoriesAmount = self.resultGame.player1Wins
-            secondPlayerVictoriesAmount = self.resultGame.player2Wins
-//            firstPlayerWinBeatsInRound = self.resultGame.player1Wins
-//            secondPlayerWinBeatsInRound = self.resultGame.player2Wins
-        }
-    }
-    
-    init(resultGame: GameModel) {
-        self.resultGame = resultGame
+    init() {
+        firstPlayerVictoriesAmount = storage.int(forKey: .playerOneCountWinsGames) ?? 0
+        firstPlayerLoseAmount = storage.int(forKey: .playerOneCountLooseGames) ?? 0
+        secondPlayerVictoriesAmount = storage.int(forKey: .playerTwoCountWinsGames) ?? 0
+        secondPlayerLoseAmount = storage.int(forKey: .playerTwoCountLooseGames) ?? 0
     }
 }

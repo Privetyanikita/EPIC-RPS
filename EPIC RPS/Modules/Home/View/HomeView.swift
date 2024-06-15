@@ -11,6 +11,7 @@ struct HomeView: View {
     @State var showSettings: Bool = false
     @State var showRules: Bool = false
     @State var gameOn: Bool = false
+    @State var goAlert: Bool = false
     var body: some View {
         NavigationView {
             VStack {
@@ -82,7 +83,7 @@ struct HomeView: View {
                     
                     ZStack{
                         Button {
-                            // action
+                            goAlert = true
                         } label: {
                             Image("backgroundButton")
                             
@@ -102,6 +103,13 @@ struct HomeView: View {
         }
         .fullScreenCover(isPresented: $showRules) {
             RulesView()
+        }
+        .alert("Тут наверное что-то должно было быть (наверное)", isPresented: $goAlert) {
+            HStack{
+                Button("Ок"){
+                   return
+                }
+            }
         }
 
     }
