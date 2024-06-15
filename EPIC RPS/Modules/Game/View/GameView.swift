@@ -82,7 +82,7 @@ struct GameView: View {
             .alert("Вернуться на главное меню?", isPresented: $showAlert) {
                 HStack{
                     Button("Да"){
-                        
+                        viewModel.stopMusic()
                         goMainView = true
                        
                     }

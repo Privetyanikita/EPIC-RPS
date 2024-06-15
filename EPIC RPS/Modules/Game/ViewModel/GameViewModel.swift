@@ -226,6 +226,12 @@ class RoundViewModel: ObservableObject {
             print("Error: Could not play sound \(soundURL)")
         }
     }
+    
+    func stopMusic(){
+        if let musicPlayer = musicPlayer, musicPlayer.isPlaying {
+            musicPlayer.stop()
+        }
+    }
 
     deinit {
         timer?.invalidate()

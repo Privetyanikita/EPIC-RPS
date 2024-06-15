@@ -17,7 +17,10 @@ final class StoreageManager: ObservableObject {
         case twoPlayer
         case melody
         case time
-       
+        case playerOneCountWinsGames
+        case playerTwoCountWinsGames
+        case playerOneCountLooseGames
+        case playerTwoCountLooseGames
     }
 
     //MARK: - propetris
