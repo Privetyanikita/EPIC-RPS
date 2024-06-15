@@ -5,6 +5,12 @@ final class FightResultViewModel: ObservableObject {
     
     @Published var onePlayer = 0
     @Published var twoPlayer = 0
+    private let storage = StoreageManager()
+    private var firstPlayerWins: Int
+    private var secondPlayerWins: Int
+    private var firstPlayerLoose: Int
+    private var secondPlayerLoose: Int
+    private var numberOfCalls: Int
     
     private var resultGame: GameModel {
         didSet {
@@ -17,6 +23,12 @@ final class FightResultViewModel: ObservableObject {
         self.resultGame = resultGame
         self.onePlayer = resultGame.player1Wins
         self.twoPlayer = resultGame.player2Wins
+        self.firstPlayerWins = storage.int(forKey: .playerOneCountWinsGames) ?? 0
+        self.secondPlayerWins = storage.int(forKey: .playerTwoCountWinsGames) ?? 0
+        self.firstPlayerLoose = storage.int(forKey: .playerOneCountLooseGames) ?? 0
+        self.secondPlayerLoose = storage.int(forKey: .playerTwoCountLooseGames) ?? 0
+        self.numberOfCalls = storage.int(forKey: .numberOfCallsViewModel) ?? 0
+        self.updatePlayerScores()
     }
         
     @ViewBuilder
@@ -43,6 +55,26 @@ final class FightResultViewModel: ObservableObject {
             BackgroungResultView()
         } else {
             BackgroundRsultLoseView()
+        }
+    }
+    
+    func updatePlayerScores() {
+        numberOfCalls += 1
+        storage.set(object: numberOfCalls, forKey: .numberOfCallsViewModel)
+        if onePlayer > twoPlayer &&  numberOfCalls % 2 == 0{
+            firstPlayerWins += 1
+            storage.set(object: firstPlayerWins, forKey: .playerOneCountWinsGames)
+            secondPlayerLoose += 1
+            storage.set(object: secondPlayerLoose, forKey: .playerTwoCountLooseGames)
+            print("Player1Wins: \(firstPlayerWins)")
+            print("Player2Loose\(secondPlayerLoose)")
+        } else if onePlayer < twoPlayer &&  numberOfCalls % 2 == 0 {
+            secondPlayerWins += 1
+            storage.set(object: secondPlayerWins, forKey: .playerTwoCountWinsGames)
+            firstPlayerLoose += 1
+            storage.set(object: firstPlayerLoose, forKey: .playerOneCountLooseGames)
+            print("Player2win:\(secondPlayerWins)")
+            print("Player1Loose: \(firstPlayerLoose)")
         }
     }
 }

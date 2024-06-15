@@ -30,7 +30,7 @@ class RoundViewModel: ObservableObject {
     private var storage = StoreageManager()
     
     init() {
-        let isTwoPlayer =  storage.bool(forKey: .twoPlayer) ?? true
+        let isTwoPlayer =  storage.bool(forKey: .twoPlayer) ?? false
         let musicName = storage.string(forKey: .melody) ?? "BattleMusic"
         let time = storage.int(forKey: .time) ?? 30
         self.musicName = musicName
@@ -218,12 +218,20 @@ class RoundViewModel: ObservableObject {
          }
         guard let soundURL = Bundle.main.url(forResource: musicName, withExtension: "wav") else { return }
         
-        do {
-            musicPlayer = try AVAudioPlayer(contentsOf: soundURL)
-            musicPlayer?.numberOfLoops = -1
-            musicPlayer?.play()
-        } catch {
-            print("Error: Could not play sound \(soundURL)")
+         do {
+             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+             musicPlayer = try AVAudioPlayer(contentsOf: soundURL, fileTypeHint: AVFileType.mp3.rawValue)
+                 
+             guard let musicPlayer = musicPlayer else { return }
+             musicPlayer.play()
+         } catch let error {
+             print(error.localizedDescription)
+             }
+    }
+    
+    func stopMusic(){
+        if let musicPlayer = musicPlayer, musicPlayer.isPlaying {
+            musicPlayer.stop()
         }
     }
 
