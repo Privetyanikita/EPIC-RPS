@@ -1,4 +1,4 @@
-# DevRush MarathonX | Final Challenge | MovieApp (in progress of development)
+# DevRush MarathonXII | First Challenge | EPIC-RPS (in progress of development)
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Privetyanikita/EPIC-RPS)  ![GitHub contributors](https://img.shields.io/github/contributors/Privetyanikita/EPIC-RPS)   ![GitHub last commit](https://img.shields.io/github/last-commit/Privetyanikita/EPIC-RPS) ![][ios] ![][swift] ![SwiftUI](https://img.shields.io/badge/SwiftUI-blue)
 
@@ -23,8 +23,8 @@
 * SDK version - Swift 5
 * Minimum iOS target - iOS 15
 * MVVM Architecture
-* Only iPhone
-* Only Portrait mode
+* iPhone only
+* Portrait mode only 
 
 ---
 ### Screenshots
