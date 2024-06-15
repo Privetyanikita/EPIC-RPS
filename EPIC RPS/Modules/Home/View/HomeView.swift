@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var showSettings: Bool = false
+    @State var showRules: Bool = false
+    @State var gameOn: Bool = false
     var body: some View {
         NavigationView {
             VStack {
@@ -16,7 +19,7 @@ struct HomeView: View {
                         .toolbar {
                             ToolbarItem(placement: .navigationBarLeading) {
                                 Button(action: {
-                                    print("Left button tapped")
+                                    showSettings = true
                                 }) {
                                     Image(systemName: "gearshape")
                                         .resizable()
@@ -27,7 +30,7 @@ struct HomeView: View {
                             
                             ToolbarItem(placement: .navigationBarTrailing) {
                                 Button(action: {
-                                    print("Right button tapped")
+                                   showRules = true
                                 }) {
                                     Image(systemName: "questionmark.circle.fill")
                                         .resizable()
@@ -59,15 +62,18 @@ struct HomeView: View {
                     }
                 }
                 Spacer()
-                VStack(spacing: 11){
+                VStack(spacing: 11) {
+                    NavigationLink(destination:  FightLoadView(), isActive: $gameOn) {
+                       EmptyView()
+                    }
                     ZStack{
                         Button {
-                            // action
+                           gameOn = true
                         } label: {
                             Image("backgroundButton")
                             
                         }
-                        Text("MAIN")
+                        Text("START")
                             .bold()
                             .font(.system(size: 16))
                             .foregroundStyle(Color.brown)
@@ -91,6 +97,13 @@ struct HomeView: View {
                 Spacer()
             }
         }
+        .fullScreenCover(isPresented: $showSettings) {
+            SettingsView()
+        }
+        .fullScreenCover(isPresented: $showRules) {
+            RulesView()
+        }
+
     }
 }
 

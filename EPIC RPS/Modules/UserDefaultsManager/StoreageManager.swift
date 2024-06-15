@@ -10,10 +10,14 @@ protocol StoreageManagerProtocol {
 }
 
 //MARK: - class StoreageManager
-final class StoreageManager {
+
+final class StoreageManager: ObservableObject {
     public enum Keys: String {
-        //TODO: под кейсами добавить ключи по которым будет сохранять
-        case test
+     
+        case twoPlayer
+        case melody
+        case time
+       
     }
 
     //MARK: - propetris

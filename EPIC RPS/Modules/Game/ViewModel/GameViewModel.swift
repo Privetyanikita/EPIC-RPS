@@ -19,10 +19,26 @@ class RoundViewModel: ObservableObject {
     var timer: Timer?
     private var soundPlayer: AVAudioPlayer?
     private var musicPlayer: AVAudioPlayer?
+    private var musicName: String
     private var nextPlayerButtonPress: Bool = false
     private var tempChoice1: Choice?
     private var tempChoice2: Choice?
+    
     @Published var showResult: Bool = false
+    @Published var showFightResultView: Bool = false
+    
+    private var storage = StoreageManager()
+    
+    init() {
+        let isTwoPlayer =  storage.bool(forKey: .twoPlayer) ?? false
+        let musicName = storage.string(forKey: .melody) ?? "BattleMusic"
+        let time = storage.int(forKey: .time) ?? 30
+        self.musicName = musicName
+        game.timeRemaining = Double(time)
+        game.twoPlayerGame = isTwoPlayer
+        
+     
+    }
     
     func chooseGesture(_ gesture: Choice) {
         guard timer?.isValid == true  else { return }
@@ -94,6 +110,7 @@ class RoundViewModel: ObservableObject {
         if game.player1Wins == 3 || game.player2Wins == 3 {
             musicPlayer?.stop()
             // Navigate to ResultView
+            showFightResultView = true
         } else {
             showResult = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self]  in
@@ -167,6 +184,8 @@ class RoundViewModel: ObservableObject {
     }
     
     private func playSound(named soundName: String) {
+
+        
         guard let soundURL = Bundle.main.url(forResource: soundName, withExtension: "wav") else { return }
         
         do {
@@ -178,16 +197,19 @@ class RoundViewModel: ObservableObject {
     }
     
      func playMusic() {
-        return
-        guard let soundURL = Bundle.main.url(forResource: "BattleMusic" , withExtension: "wav") else { return }
-        
-        do {
-            musicPlayer = try AVAudioPlayer(contentsOf: soundURL)
-            musicPlayer?.numberOfLoops = 100
-            musicPlayer?.play()
-        } catch {
-            print("Error: Could not play sound \(soundURL)")
-        }
+      
+//         if let musicPlayer = musicPlayer, musicPlayer.isPlaying {
+//             musicPlayer.stop()
+//         }
+//        guard let soundURL = Bundle.main.url(forResource: musicName, withExtension: "wav") else { return }
+//        
+//        do {
+//            musicPlayer = try AVAudioPlayer(contentsOf: soundURL)
+//            musicPlayer?.numberOfLoops = -1
+//            musicPlayer?.play()
+//        } catch {
+//            print("Error: Could not play sound \(soundURL)")
+//        }
     }
 
     deinit {
