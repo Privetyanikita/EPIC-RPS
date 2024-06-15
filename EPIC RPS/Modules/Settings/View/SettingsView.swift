@@ -31,7 +31,7 @@ struct SettingsView: View {
 
     @AppStorage("time") private var gameDuration: Int = 30
     @AppStorage("melody") private var backgroundMusic: melody = .melody4
-    @AppStorage("twoPlayer") private var playWithFriend: Bool = true
+    @AppStorage("twoPlayer") private var playWithFriend: Bool = false
     
     @State private var isMusicPickerPresented: Bool = false
     @Environment(\.dismiss) var dismiss

@@ -21,6 +21,7 @@ final class StoreageManager: ObservableObject {
         case playerTwoCountWinsGames
         case playerOneCountLooseGames
         case playerTwoCountLooseGames
+        case numberOfCallsViewModel
     }
 
     //MARK: - propetris
