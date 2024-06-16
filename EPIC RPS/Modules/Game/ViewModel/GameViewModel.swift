@@ -183,10 +183,11 @@ class RoundViewModel: ObservableObject {
         if !game.isPaused {
             game.isPaused = true
             timer?.invalidate()
-            
+            musicPlayer?.stop()
         } else {
             game.isPaused = false
             startTimer()
+            musicPlayer?.play()
         }
     }
     
