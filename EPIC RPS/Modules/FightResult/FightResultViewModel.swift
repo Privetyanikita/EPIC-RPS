@@ -66,15 +66,11 @@ final class FightResultViewModel: ObservableObject {
             storage.set(object: firstPlayerWins, forKey: .playerOneCountWinsGames)
             secondPlayerLoose += 1
             storage.set(object: secondPlayerLoose, forKey: .playerTwoCountLooseGames)
-            print("Player1Wins: \(firstPlayerWins)")
-            print("Player2Loose\(secondPlayerLoose)")
         } else if onePlayer < twoPlayer &&  numberOfCalls % 2 == 0 {
             secondPlayerWins += 1
             storage.set(object: secondPlayerWins, forKey: .playerTwoCountWinsGames)
             firstPlayerLoose += 1
             storage.set(object: firstPlayerLoose, forKey: .playerOneCountLooseGames)
-            print("Player2win:\(secondPlayerWins)")
-            print("Player1Loose: \(firstPlayerLoose)")
         }
     }
 }
